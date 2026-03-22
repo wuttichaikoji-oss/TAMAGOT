@@ -1,34 +1,26 @@
 {
-  "frame_width": 420,
-  "frame_height": 360,
-  "animations": {
-    "idle": {
-      "frames": 5,
-      "duration_ms": 140
-    },
-    "blink": {
-      "frames": 4,
-      "duration_ms": 90
-    },
-    "happy": {
-      "frames": 5,
-      "duration_ms": 90
-    },
-    "sleep": {
-      "frames": 4,
-      "duration_ms": 170
-    },
-    "love": {
-      "frames": 4,
-      "duration_ms": 110
-    },
-    "sad": {
-      "frames": 4,
-      "duration_ms": 150
-    },
-    "hurt": {
-      "frames": 3,
-      "duration_ms": 85
-    }
+  "master": "assets/master/nova_master_transparent.png",
+  "layers": [
+    "assets/layers/body.png",
+    "assets/layers/wing_left.png",
+    "assets/layers/wing_right.png",
+    "assets/layers/antenna_star.png",
+    "assets/layers/eyelids.png"
+  ],
+  "idle_12": {
+    "frames": 12,
+    "frame_duration_ms": 250,
+    "blink_frames": [
+      8,
+      9,
+      10
+    ],
+    "wing_flutter_frames": [
+      2,
+      3,
+      8,
+      9
+    ],
+    "star_bob": true
   }
 }

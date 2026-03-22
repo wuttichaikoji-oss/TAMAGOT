@@ -1,24 +1,25 @@
-# Laya Pet — Frame-Based Pet Mode (GitHub Ready)
+# Laya Pet — Nova Master + Layers + Idle 12
 
-รอบนี้เปลี่ยนแนวทางใหม่ตามข้อเสนอ:
-1. ตัดพื้นหลังออกก่อน
-2. ทำ action ละหลายเฟรม
-3. เล่นเป็น frame animation จริงบนหน้า Home
+ชุดนี้ทำใหม่จาก Nova master ที่สะอาดกว่าเดิม
 
-## เฟรมที่มี
-- idle = 5
-- blink = 4
-- happy = 5
-- sleep = 4
-- love = 4
-- sad = 4
-- hurt = 3
+## สิ่งที่มี
+- Transparent master
+- Layer split
+  - body
+  - wing_left
+  - wing_right
+  - antenna_star
+  - eyelids
+- Idle animation 12 เฟรม / 3 วินาที
+- GitHub-ready demo
 
-## จุดเด่น
-- ไม่ใช่ภาพเดียวขยับด้วย CSS แล้ว
-- เป็น frame-based structure พร้อมต่อยอดเป็นเกมจริงง่ายกว่า
-- Save / Load state ด้วย localStorage
-- พร้อมอัป GitHub Pages
+## ไฟล์สำคัญ
+- `assets/master/nova_master_transparent.png`
+- `assets/layers/*.png`
+- `assets/frames/idle/idle_00.png` ถึง `idle_11.png`
+- `assets/strips/idle_12_strip.png`
+- `assets/idle_12_preview.gif`
+- `assets/animation_meta.json`
 
 ## วิธีอัป GitHub Pages
 1. แตกไฟล์ ZIP
@@ -26,4 +27,4 @@
 3. อัปทุกไฟล์ขึ้น repo
 4. Settings > Pages
 5. Deploy from a branch
-6. เลือก main และ /(root)
+6. เลือก `main` และ `/(root)`

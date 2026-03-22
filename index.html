@@ -4,126 +4,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laya Pet — Frame-Based Pet Mode</title>
+  <title>Laya Pet — Nova Master + Idle 12</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div class="app">
     <div class="topbar">
-      <div class="brand">
-        <h1>Laya Pet — Home</h1>
-        <p>รอบนี้เปลี่ยนเป็น “เฟรมจริงหลายเฟรม” แล้ว</p>
+      <div>
+        <h1>Nova Master + Idle 12</h1>
+        <p>เวอร์ชันนี้ใช้ transparent master ใหม่ + layer split + idle 12 เฟรม</p>
       </div>
-      <div class="coin" id="coinDisplay">🪙 120</div>
+      <div class="pill">3s loop</div>
     </div>
 
     <div class="shell">
-      <main>
-        <section class="card room">
-          <div class="room-header">
-            <div class="pill">💖 Loyal Nova</div>
-            <div class="pill" id="scoreDisplay">📈 Score 78</div>
-          </div>
-
-          <div class="speech" id="speechBubble">ตอนนี้น้องขยับจากเฟรมจริง ไม่ใช่แค่ภาพเดียวขยับแล้ว 💖</div>
-
-          <div class="stage">
-            <div class="pet-frame">
-              <img id="petFrame" src="assets/frames/idle/idle_00.png" alt="Nova frame animation" />
-            </div>
-          </div>
-
-          <div class="pet-name">
-            <h2>Mochi — Loyal Nova</h2>
-            <p id="petSub">โหมดเลี้ยงแบบ frame-based เพื่อให้การขยับเนียนขึ้น</p>
-          </div>
-        </section>
-
-        <div class="mobile-stack">
-          <section class="card status-card">
-            <h3 class="section-title">Status</h3>
-            <div class="status-list">
-              <div class="status-row"><strong>Hunger</strong><div class="bar hunger"><span id="barHunger" style="width:78%"></span></div><span id="txtHunger">78%</span></div>
-              <div class="status-row"><strong>Energy</strong><div class="bar energy"><span id="barEnergy" style="width:64%"></span></div><span id="txtEnergy">64%</span></div>
-              <div class="status-row"><strong>Happy</strong><div class="bar happy"><span id="barHappy" style="width:86%"></span></div><span id="txtHappy">86%</span></div>
-              <div class="status-row"><strong>Clean</strong><div class="bar clean"><span id="barClean" style="width:71%"></span></div><span id="txtClean">71%</span></div>
-              <div class="status-row"><strong>Bond</strong><div class="bar bond"><span id="barBond" style="width:82%"></span></div><span id="txtBond">82%</span></div>
-            </div>
-          </section>
-
-          <section class="card actions-card">
-            <h3 class="section-title">Care Actions</h3>
-            <div class="actions">
-              <button class="action" data-action="feed">🍓 Feed</button>
-              <button class="action" data-action="play">🎮 Play</button>
-              <button class="action" data-action="clean">🛁 Clean</button>
-              <button class="action" data-action="sleep">😴 Sleep</button>
-            </div>
-            <div class="note">ตอนนี้ไม่มี battle เพื่อโฟกัสการขยับของ pet ให้สมูทก่อน</div>
-          </section>
-
-          <section class="card actions-card">
-            <h3 class="section-title">Save / Load</h3>
-            <div class="actions">
-              <button class="action" id="saveNowBtn">💾 Save Now</button>
-              <button class="action" id="resetSaveBtn">🗑️ Reset Save</button>
-            </div>
-            <div id="saveStateLabel" class="note">💾 ยังไม่เคยบันทึก</div>
-          </section>
-
-          <section class="card log-card">
-            <h3 class="section-title">Recent Reactions</h3>
-            <div id="logArea"></div>
-          </section>
+      <section class="card stage-card">
+        <div class="speech">กระพริบตาประมาณทุก 3 วินาที · ปีกกระดิกบางช่วง · ดาวขยับเล็กน้อย</div>
+        <div class="stage">
+          <img id="anim" class="anim" src="assets/frames/idle/idle_00.png" alt="Nova idle animation" />
         </div>
-      </main>
+        <div class="controls">
+          <button id="playBtn">▶ Play</button>
+          <button id="pauseBtn">⏸ Pause</button>
+          <button id="stepBtn">⏭ Next Frame</button>
+        </div>
+      </section>
 
-      <aside class="desktop-side">
-        <section class="card status-card">
-          <h3 class="section-title">Status</h3>
-          <div class="status-list">
-            <div class="status-row"><strong>Hunger</strong><div class="bar hunger"><span id="barHungerD" style="width:78%"></span></div><span id="txtHungerD">78%</span></div>
-            <div class="status-row"><strong>Energy</strong><div class="bar energy"><span id="barEnergyD" style="width:64%"></span></div><span id="txtEnergyD">64%</span></div>
-            <div class="status-row"><strong>Happy</strong><div class="bar happy"><span id="barHappyD" style="width:86%"></span></div><span id="txtHappyD">86%</span></div>
-            <div class="status-row"><strong>Clean</strong><div class="bar clean"><span id="barCleanD" style="width:71%"></span></div><span id="txtCleanD">71%</span></div>
-            <div class="status-row"><strong>Bond</strong><div class="bar bond"><span id="barBondD" style="width:82%"></span></div><span id="txtBondD">82%</span></div>
-          </div>
-        </section>
-
-        <section class="card actions-card">
-          <h3 class="section-title">Care Actions</h3>
-          <div class="actions">
-            <button class="action" data-action="feed">🍓 Feed</button>
-            <button class="action" data-action="play">🎮 Play</button>
-            <button class="action" data-action="clean">🛁 Clean</button>
-            <button class="action" data-action="sleep">😴 Sleep</button>
-          </div>
-          <div class="note">เปลี่ยนเป็นระบบเฟรมจริงแล้ว เพื่อให้ต่อยอดเป็นสไลม์กระโดดดึ๋งได้ง่ายขึ้น</div>
-        </section>
-
-        <section class="card tech-card">
-          <h3 class="section-title">Frame Animation Info</h3>
+      <aside class="side">
+        <section class="card">
+          <h3>สิ่งที่ได้ในชุดนี้</h3>
           <div class="meta">
-            <div class="metric"><div class="label">Idle</div><div class="value">5 frames</div></div>
-            <div class="metric"><div class="label">Blink</div><div class="value">4 frames</div></div>
-            <div class="metric"><div class="label">Happy</div><div class="value">5 frames</div></div>
-            <div class="metric"><div class="label">Sleep</div><div class="value">4 frames</div></div>
+            <div class="metric"><div class="label">Master</div><div class="value">Transparent</div></div>
+            <div class="metric"><div class="label">Layers</div><div class="value">5 ไฟล์</div></div>
+            <div class="metric"><div class="label">Idle</div><div class="value">12 เฟรม</div></div>
+            <div class="metric"><div class="label">Blink</div><div class="value">ทุก 3 วิ</div></div>
           </div>
-          <div class="note">โครงนี้คือจุดเริ่มต้นที่ถูกกว่าของเกมจริง: ตัดพื้นหลัง → ทำ action ละหลายเฟรม</div>
         </section>
 
-        <section class="card actions-card">
-          <h3 class="section-title">Save / Load</h3>
-          <div class="actions">
-            <button class="action" id="saveNowBtnDesktop">💾 Save Now</button>
-            <button class="action" id="resetSaveBtnDesktop">🗑️ Reset Save</button>
-          </div>
-          <div id="saveStateLabelDesktop" class="note">💾 ยังไม่เคยบันทึก</div>
-        </section>
-
-        <section class="card log-card">
-          <h3 class="section-title">Recent Reactions</h3>
-          <div id="logAreaDesktop"></div>
+        <section class="card">
+          <h3>ไฟล์สำคัญ</h3>
+          <ul>
+            <li>assets/master/nova_master_transparent.png</li>
+            <li>assets/layers/body.png</li>
+            <li>assets/layers/wing_left.png</li>
+            <li>assets/layers/wing_right.png</li>
+            <li>assets/layers/antenna_star.png</li>
+            <li>assets/frames/idle/idle_00.png - idle_11.png</li>
+          </ul>
         </section>
       </aside>
     </div>
