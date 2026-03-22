@@ -1,60 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laya Pet — Blink Redraw Fix</title>
+  <title>Nova Blink 8 Web Test</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="app">
-    <div class="topbar">
-      <div>
-        <h1>Nova Blink Redraw Fix</h1>
-        <p>รอบนี้วาดเฟรมปิดตา 3 จังหวะใหม่ แล้วใส่กลับเข้า idle 12 เฟรม</p>
+  <main class="app">
+    <section class="panel hero">
+      <div class="title-wrap">
+        <h1>Nova Blink 8 Web Test</h1>
+        <p>ไฟล์นี้ทำไว้สำหรับลองอัปขึ้นเว็บและดูจังหวะ blink เบื้องต้น</p>
       </div>
-      <div class="pill">3s loop</div>
-    </div>
 
-    <div class="shell">
-      <section class="card stage-card">
-        <div class="speech">Blink ใหม่: half → closed → reopen · ปีกยังเป็น overlay · ดาวขยับเล็กมาก</div>
-        <div class="stage">
-          <img id="anim" class="anim" src="assets/frames/idle/idle_00.png" alt="Nova idle animation" />
+      <div class="stage">
+        <div class="glow"></div>
+        <img id="novaBlink" src="assets/blink8/nova_blink8_frame_1.png" alt="Nova blink animation" />
+      </div>
+
+      <div class="controls">
+        <button id="blinkNowBtn">Blink Now</button>
+        <button id="toggleAutoBtn">Pause Auto Blink</button>
+      </div>
+
+      <div class="status">
+        <div class="card">
+          <span class="label">Current State</span>
+          <strong id="stateText">Idle</strong>
         </div>
-        <div class="controls">
-          <button id="playBtn">▶ Play</button>
-          <button id="pauseBtn">⏸ Pause</button>
-          <button id="stepBtn">⏭ Next Frame</button>
+        <div class="card">
+          <span class="label">Auto Blink</span>
+          <strong id="autoText">Soft 5.0–7.2s</strong>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <aside class="side">
-        <section class="card">
-          <h3>สิ่งที่แก้</h3>
-          <div class="meta">
-            <div class="metric"><div class="label">Blink</div><div class="value">3 เฟรมใหม่</div></div>
-            <div class="metric"><div class="label">Closed Eye</div><div class="value">วาดจริง</div></div>
-            <div class="metric"><div class="label">Star</div><div class="value">tiny bob</div></div>
-            <div class="metric"><div class="label">Body Cut</div><div class="value">ไม่มี</div></div>
-          </div>
-        </section>
+    <section class="panel info">
+      <h2>เฟรมที่ใช้ทดสอบ</h2>
+      <div class="frame-grid">
+        <div class="frame-card"><img src="assets/blink8/nova_blink8_frame_1.png" alt=""><span>1 เปิดตา</span></div>
+        <div class="frame-card"><img src="assets/blink8/nova_blink8_frame_2.png" alt=""><span>2 หรี่ลงนิด</span></div>
+        <div class="frame-card"><img src="assets/blink8/nova_blink8_frame_3.png" alt=""><span>3 หรี่ลงอีก</span></div>
+        <div class="frame-card"><img src="assets/blink8/nova_blink8_frame_4.png" alt=""><span>4 เกือบปิด</span></div>
+        <div class="frame-card"><img src="assets/blink8/nova_blink8_frame_5.png" alt=""><span>5 ปิดสนิท</span></div>
+        <div class="frame-card"><img src="assets/blink8/nova_blink8_frame_6.png" alt=""><span>6 เปิดกลับนิด</span></div>
+        <div class="frame-card"><img src="assets/blink8/nova_blink8_frame_7.png" alt=""><span>7 เปิดกลับมากขึ้น</span></div>
+        <div class="frame-card"><img src="assets/blink8/nova_blink8_frame_8.png" alt=""><span>8 เปิดเต็ม</span></div>
+      </div>
 
-        <section class="card">
-          <h3>ไฟล์สำคัญ</h3>
-          <ul>
-            <li>assets/master/nova_master_clean.png</li>
-            <li>assets/layers/blink_half_overlay.png</li>
-            <li>assets/layers/blink_closed_overlay.png</li>
-            <li>assets/layers/blink_reopen_overlay.png</li>
-            <li>assets/frames/idle/idle_00.png - idle_11.png</li>
-            <li>assets/frames/blink/blink_00.png - blink_04.png</li>
-          </ul>
-        </section>
-      </aside>
-    </div>
-  </div>
+      <p class="note">หมายเหตุ: ตัวนี้เป็นเว็บเทสต์ชั่วคราวจากภาพที่เจนล่าสุด เพื่อให้ลองอัปเว็บก่อน ยังไม่ใช่ final production asset</p>
+    </section>
+  </main>
+
   <script src="js/app.js"></script>
 </body>
 </html>
