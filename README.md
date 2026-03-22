@@ -1,30 +1,17 @@
-# Laya Pet — Nova Master + Layers + Idle 12
+# Laya Pet — Nova Idle 12 Fix
 
-ชุดนี้ทำใหม่จาก Nova master ที่สะอาดกว่าเดิม
+รอบนี้แก้จาก feedback โดยตรง:
 
-## สิ่งที่มี
-- Transparent master
-- Layer split
-  - body
-  - wing_left
-  - wing_right
-  - antenna_star
-  - eyelids
-- Idle animation 12 เฟรม / 3 วินาที
-- GitHub-ready demo
+- ตาไม่กระพริบ → วาด closed-eye overlay เพิ่มจริง
+- ดาวขาดออกจากกัน → ลดระยะการขยับของ star ให้เล็กลงมาก
+- ปีกขยับแล้วตัดก้อนลำตัว → เปลี่ยนเป็น wing overlay flutter เท่านั้น ตัวก้อนลำตัวไม่ถูกตัด
 
 ## ไฟล์สำคัญ
-- `assets/master/nova_master_transparent.png`
-- `assets/layers/*.png`
+- `assets/master/nova_master_clean.png`
+- `assets/layers/wing_left_overlay.png`
+- `assets/layers/wing_right_overlay.png`
+- `assets/layers/star_overlay.png`
+- `assets/layers/blink_closed_overlay.png`
 - `assets/frames/idle/idle_00.png` ถึง `idle_11.png`
 - `assets/strips/idle_12_strip.png`
 - `assets/idle_12_preview.gif`
-- `assets/animation_meta.json`
-
-## วิธีอัป GitHub Pages
-1. แตกไฟล์ ZIP
-2. สร้าง repository ใหม่
-3. อัปทุกไฟล์ขึ้น repo
-4. Settings > Pages
-5. Deploy from a branch
-6. เลือก `main` และ `/(root)`

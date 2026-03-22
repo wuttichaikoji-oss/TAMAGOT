@@ -1,11 +1,10 @@
 {
-  "master": "assets/master/nova_master_transparent.png",
+  "master": "assets/master/nova_master_clean.png",
   "layers": [
-    "assets/layers/body.png",
-    "assets/layers/wing_left.png",
-    "assets/layers/wing_right.png",
-    "assets/layers/antenna_star.png",
-    "assets/layers/eyelids.png"
+    "assets/layers/wing_left_overlay.png",
+    "assets/layers/wing_right_overlay.png",
+    "assets/layers/star_overlay.png",
+    "assets/layers/blink_closed_overlay.png"
   ],
   "idle_12": {
     "frames": 12,
@@ -21,6 +20,6 @@
       8,
       9
     ],
-    "star_bob": true
+    "star_bob": "tiny"
   }
 }

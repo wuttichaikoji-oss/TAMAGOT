@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laya Pet — Nova Master + Idle 12</title>
+  <title>Laya Pet — Nova Idle 12 Fix</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div class="app">
     <div class="topbar">
       <div>
-        <h1>Nova Master + Idle 12</h1>
-        <p>เวอร์ชันนี้ใช้ transparent master ใหม่ + layer split + idle 12 เฟรม</p>
+        <h1>Nova Idle 12 — Fixed</h1>
+        <p>แก้ 3 จุดหลัก: ตากระพริบจริง, ดาวไม่หลุด, ปีกไม่ตัดก้อนลำตัว</p>
       </div>
       <div class="pill">3s loop</div>
     </div>
 
     <div class="shell">
       <section class="card stage-card">
-        <div class="speech">กระพริบตาประมาณทุก 3 วินาที · ปีกกระดิกบางช่วง · ดาวขยับเล็กน้อย</div>
+        <div class="speech">เวอร์ชันนี้ใช้ closed-eye frame จริง และให้ star/wing ขยับแบบเล็กมากเพื่อให้ดูเป็นธรรมชาติ</div>
         <div class="stage">
           <img id="anim" class="anim" src="assets/frames/idle/idle_00.png" alt="Nova idle animation" />
         </div>
@@ -32,23 +32,23 @@
 
       <aside class="side">
         <section class="card">
-          <h3>สิ่งที่ได้ในชุดนี้</h3>
+          <h3>ที่แก้ในรอบนี้</h3>
           <div class="meta">
-            <div class="metric"><div class="label">Master</div><div class="value">Transparent</div></div>
-            <div class="metric"><div class="label">Layers</div><div class="value">5 ไฟล์</div></div>
-            <div class="metric"><div class="label">Idle</div><div class="value">12 เฟรม</div></div>
-            <div class="metric"><div class="label">Blink</div><div class="value">ทุก 3 วิ</div></div>
+            <div class="metric"><div class="label">Blink</div><div class="value">วาดเพิ่มจริง</div></div>
+            <div class="metric"><div class="label">Star</div><div class="value">ขยับเล็กลง</div></div>
+            <div class="metric"><div class="label">Wings</div><div class="value">overlay only</div></div>
+            <div class="metric"><div class="label">Body</div><div class="value">ไม่ถูกตัด</div></div>
           </div>
         </section>
 
         <section class="card">
           <h3>ไฟล์สำคัญ</h3>
           <ul>
-            <li>assets/master/nova_master_transparent.png</li>
-            <li>assets/layers/body.png</li>
-            <li>assets/layers/wing_left.png</li>
-            <li>assets/layers/wing_right.png</li>
-            <li>assets/layers/antenna_star.png</li>
+            <li>assets/master/nova_master_clean.png</li>
+            <li>assets/layers/wing_left_overlay.png</li>
+            <li>assets/layers/wing_right_overlay.png</li>
+            <li>assets/layers/star_overlay.png</li>
+            <li>assets/layers/blink_closed_overlay.png</li>
             <li>assets/frames/idle/idle_00.png - idle_11.png</li>
           </ul>
         </section>
