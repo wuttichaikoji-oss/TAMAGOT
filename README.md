@@ -1,10 +1,3 @@
-# Laya Pet — GitHub Ready Fixed
+Laya Pet — Pet Mode Puppet (GitHub Ready)
 
-เวอร์ชันนี้มีครบและพร้อมอัป GitHub Pages:
-- index.html
-- assets/
-- css/
-- js/
-- Save / Load
-- Quick Battle
-- Living Pet Motion (ดุ๊กดิ๊ก)
+เวอร์ชันนี้โฟกัสโหมดเลี้ยงและรื้อ pet stage ใหม่
