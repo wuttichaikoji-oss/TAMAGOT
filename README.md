@@ -1,17 +1,14 @@
-# Laya Pet — Nova Idle 12 Fix
+# Laya Pet — Blink Redraw Fix
 
-รอบนี้แก้จาก feedback โดยตรง:
+รอบนี้ทำตาม feedback:
+- วาด blink 3 เฟรมใหม่จริง (half / closed / reopen)
+- star bob ลดลงมากเพื่อไม่ให้ดูหลุดจากก้าน
+- wing flutter เป็น overlay only ตัวก้อนลำตัวไม่ถูกตัด
 
-- ตาไม่กระพริบ → วาด closed-eye overlay เพิ่มจริง
-- ดาวขาดออกจากกัน → ลดระยะการขยับของ star ให้เล็กลงมาก
-- ปีกขยับแล้วตัดก้อนลำตัว → เปลี่ยนเป็น wing overlay flutter เท่านั้น ตัวก้อนลำตัวไม่ถูกตัด
-
-## ไฟล์สำคัญ
+ไฟล์สำคัญ:
 - `assets/master/nova_master_clean.png`
-- `assets/layers/wing_left_overlay.png`
-- `assets/layers/wing_right_overlay.png`
-- `assets/layers/star_overlay.png`
+- `assets/layers/blink_half_overlay.png`
 - `assets/layers/blink_closed_overlay.png`
+- `assets/layers/blink_reopen_overlay.png`
 - `assets/frames/idle/idle_00.png` ถึง `idle_11.png`
-- `assets/strips/idle_12_strip.png`
-- `assets/idle_12_preview.gif`
+- `assets/frames/blink/blink_00.png` ถึง `blink_04.png`

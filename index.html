@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laya Pet — Nova Idle 12 Fix</title>
+  <title>Laya Pet — Blink Redraw Fix</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div class="app">
     <div class="topbar">
       <div>
-        <h1>Nova Idle 12 — Fixed</h1>
-        <p>แก้ 3 จุดหลัก: ตากระพริบจริง, ดาวไม่หลุด, ปีกไม่ตัดก้อนลำตัว</p>
+        <h1>Nova Blink Redraw Fix</h1>
+        <p>รอบนี้วาดเฟรมปิดตา 3 จังหวะใหม่ แล้วใส่กลับเข้า idle 12 เฟรม</p>
       </div>
       <div class="pill">3s loop</div>
     </div>
 
     <div class="shell">
       <section class="card stage-card">
-        <div class="speech">เวอร์ชันนี้ใช้ closed-eye frame จริง และให้ star/wing ขยับแบบเล็กมากเพื่อให้ดูเป็นธรรมชาติ</div>
+        <div class="speech">Blink ใหม่: half → closed → reopen · ปีกยังเป็น overlay · ดาวขยับเล็กมาก</div>
         <div class="stage">
           <img id="anim" class="anim" src="assets/frames/idle/idle_00.png" alt="Nova idle animation" />
         </div>
@@ -32,12 +32,12 @@
 
       <aside class="side">
         <section class="card">
-          <h3>ที่แก้ในรอบนี้</h3>
+          <h3>สิ่งที่แก้</h3>
           <div class="meta">
-            <div class="metric"><div class="label">Blink</div><div class="value">วาดเพิ่มจริง</div></div>
-            <div class="metric"><div class="label">Star</div><div class="value">ขยับเล็กลง</div></div>
-            <div class="metric"><div class="label">Wings</div><div class="value">overlay only</div></div>
-            <div class="metric"><div class="label">Body</div><div class="value">ไม่ถูกตัด</div></div>
+            <div class="metric"><div class="label">Blink</div><div class="value">3 เฟรมใหม่</div></div>
+            <div class="metric"><div class="label">Closed Eye</div><div class="value">วาดจริง</div></div>
+            <div class="metric"><div class="label">Star</div><div class="value">tiny bob</div></div>
+            <div class="metric"><div class="label">Body Cut</div><div class="value">ไม่มี</div></div>
           </div>
         </section>
 
@@ -45,11 +45,11 @@
           <h3>ไฟล์สำคัญ</h3>
           <ul>
             <li>assets/master/nova_master_clean.png</li>
-            <li>assets/layers/wing_left_overlay.png</li>
-            <li>assets/layers/wing_right_overlay.png</li>
-            <li>assets/layers/star_overlay.png</li>
+            <li>assets/layers/blink_half_overlay.png</li>
             <li>assets/layers/blink_closed_overlay.png</li>
+            <li>assets/layers/blink_reopen_overlay.png</li>
             <li>assets/frames/idle/idle_00.png - idle_11.png</li>
+            <li>assets/frames/blink/blink_00.png - blink_04.png</li>
           </ul>
         </section>
       </aside>

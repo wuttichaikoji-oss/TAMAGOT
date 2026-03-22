@@ -4,22 +4,25 @@
     "assets/layers/wing_left_overlay.png",
     "assets/layers/wing_right_overlay.png",
     "assets/layers/star_overlay.png",
-    "assets/layers/blink_closed_overlay.png"
+    "assets/layers/blink_half_overlay.png",
+    "assets/layers/blink_closed_overlay.png",
+    "assets/layers/blink_reopen_overlay.png"
   ],
   "idle_12": {
     "frames": 12,
     "frame_duration_ms": 250,
-    "blink_frames": [
-      8,
-      9,
-      10
-    ],
+    "blink_frames": {
+      "half": 8,
+      "closed": 9,
+      "reopen": 10
+    },
     "wing_flutter_frames": [
       2,
       3,
       8,
       9
     ],
-    "star_bob": "tiny"
+    "star_bob": "tiny",
+    "body_cut": false
   }
 }
