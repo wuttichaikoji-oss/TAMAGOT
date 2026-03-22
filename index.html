@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laya Pet GitHub Ready</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="brand"><h1>Laya Pet — Home</h1><p>เวอร์ชันพร้อมขึ้น GitHub และมี index ครบ</p></div>
+    <div class="coin" id="coinDisplay">🪙 120</div>
+  </div>
+
+  <section class="card room">
+    <div class="room-header">
+      <div class="pill">💖 Loyal Nova</div>
+      <div class="pill" id="scoreDisplay">📈 Score 78</div>
+    </div>
+    <div class="speech" id="speechBubble">ตอนนี้ไฟล์มี index.html ครบแล้ว 💖</div>
+    <div class="stage">
+      <div class="shadow"></div>
+      <img id="petImg" class="petimg" src="assets/idle.png" alt="Nova idle" />
+    </div>
+    <div class="pet-name">
+      <h2>Mochi — Loyal Nova</h2>
+      <p id="petSub">พร้อมอัป GitHub Pages ได้เลย</p>
+    </div>
+  </section>
+
+  <section class="card status-card">
+    <h3 class="section-title">Status</h3>
+    <div class="status-list">
+      <div class="status-row"><strong>Hunger</strong><div class="bar hunger"><span id="barHunger" style="width:78%"></span></div><span id="txtHunger">78%</span></div>
+      <div class="status-row"><strong>Energy</strong><div class="bar energy"><span id="barEnergy" style="width:64%"></span></div><span id="txtEnergy">64%</span></div>
+      <div class="status-row"><strong>Happy</strong><div class="bar happy"><span id="barHappy" style="width:86%"></span></div><span id="txtHappy">86%</span></div>
+      <div class="status-row"><strong>Clean</strong><div class="bar clean"><span id="barClean" style="width:71%"></span></div><span id="txtClean">71%</span></div>
+      <div class="status-row"><strong>Bond</strong><div class="bar bond"><span id="barBond" style="width:82%"></span></div><span id="txtBond">82%</span></div>
+    </div>
+  </section>
+
+  <section class="card actions-card">
+    <h3 class="section-title">Care Actions</h3>
+    <div class="actions">
+      <button class="action" data-action="feed">🍓 Feed</button>
+      <button class="action" data-action="play">🎮 Play</button>
+      <button class="action" data-action="clean">🛁 Clean</button>
+      <button class="action" data-action="sleep">😴 Sleep</button>
+    </div>
+  </section>
+
+  <section class="card actions-card">
+    <h3 class="section-title">Quick Battle</h3>
+    <div class="actions">
+      <button class="action" id="prepBattleBtn">⚔️ Prep Battle</button>
+      <button class="action" id="startBattleBtn">🔥 Start Battle</button>
+    </div>
+    <div style="margin-top:12px;color:#b7b9d9;font-size:.92rem">Battle Power จะอิงจาก <strong>Bond</strong> และ <strong>Happy</strong> เป็นหลัก</div>
+    <div id="battlePreview" style="margin-top:10px;color:#eef2ff;font-size:.92rem"></div>
+  </section>
+
+  <section class="card mood-card">
+    <h3 class="section-title">Nova Mood</h3>
+    <div class="moods" id="moodButtons"></div>
+  </section>
+
+  <section class="card actions-card">
+    <h3 class="section-title">Save / Load</h3>
+    <div class="actions">
+      <button class="action" id="saveNowBtn">💾 Save Now</button>
+      <button class="action" id="resetSaveBtn">🗑️ Reset Save</button>
+    </div>
+    <div id="saveStateLabel" style="margin-top:12px;color:#b7b9d9;font-size:.92rem">💾 ยังไม่เคยบันทึก</div>
+  </section>
+
+  <section class="card log-card">
+    <h3 class="section-title">Recent Reactions</h3>
+    <div id="logArea"></div>
+  </section>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
